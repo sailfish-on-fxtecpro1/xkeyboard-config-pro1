@@ -425,9 +425,9 @@ xkb_symbols "common_keys" {
     key <TAB>	{ [	Tab		] };
 
     // broken UI spec.
-    key <RTRN>	{ [	KP_Enter	] };
+    key <RTRN>	{ [	Return		] };
 
-    key <KPEN>	{ [	Return		] };
+    key <KPEN>	{ [	KP_Enter	] };
     key <ESC>	{ [	Escape		] };
 
     key <FK01>	{ [	F1	] };
