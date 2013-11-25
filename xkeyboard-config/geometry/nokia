@@ -8,7 +8,7 @@ default xkb_geometry "nokiarx51" {
 
     shape.cornerRadius= 1.5;
     shape "NORM"  { { [18,15] } };
-    shape "SPCE"  { { [36,15] } };
+    shape "SPCE"  { { [54,15] } };
     shape "FRAME" { cornerRadius= 2.5, { [243,54] } };
 
     solid "FRAME" {
@@ -51,3 +51,54 @@ default xkb_geometry "nokiarx51" {
     }; // End of "Keys" section
 
 }; // End of "rx51" geometry
+
+xkb_geometry "nokiarx44" {
+
+    description= "Nokia RX-44";
+    width= 346.5; // 11x8.5mm + 2x11mm border
+    height= 102.0; // 4x7mm + 2x3mm border
+
+    shape.cornerRadius= 1.5;
+    shape "NORM"  { { [25.5,21.0] } };
+    shape "FUNC"  { { [38.25,21.0] } };
+    shape "SPCE"  { { [76.5,21.0] } };
+
+    section.left= 33.0;
+    row.left= 0.0;
+    key.shape= "NORM";
+    key.gap= 0;
+    section "Keys" {
+	top= 0;
+	row {
+	    top= 9.0;
+	    keys { <AD01>, <AD02>, <AD03>, <AD04>, <AD05>,
+		   <AD06>, <AD07>, <AD08>, <AD09>, <AD10>,
+		   <BKSP>
+	    };
+	};
+	row {
+	    top= 30.0;
+	    keys { <AC01>, <AC02>, <AC03>, <AC04>, <AC05>,
+		   <AC06>, <AC07>, <AC08>, <AC09>, <AC11>,
+		   <RTRN>
+	    };
+	};
+	row {
+	    top= 51.0;
+	    keys { <AB01>, <AB02>, <AB03>, <AB04>, <AB05>,
+		   <AB06>, <AB07>, <AC10>, <AE11>, <AE12>,
+		   <RTRN>
+	    };
+	};
+	row {
+	    top= 72.0;
+	    keys { { <FN>, "FUNC", color="grey20" },
+		   <LFSH>, <COMP>,
+		   { <SPCE>, "SPCE", color="grey20" },
+		   <AB08>, <AB09>, <RCTL>,
+                   { <LFSH>, "FUNC", color="grey20" }
+	    };
+	};
+    }; // End of "Keys" section
+
+}; // End of "rx44" geometry
