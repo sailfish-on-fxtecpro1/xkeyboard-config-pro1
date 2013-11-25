@@ -4,13 +4,13 @@ AM_INIT_AUTOMAKE([foreign dist-bzip2])
 AM_MAINTAINER_MODE
 
 # Require X.Org macros 1.12 or later for XORG_WITH_XSLTPROC
-m4_ifndef([XORG_MACROS_VERSION],
-          [m4_fatal([must install xorg-macros 1.12 or later before
-          running autoconf/autogen])])
-XORG_MACROS_VERSION(1.12)
-XORG_MANPAGE_SECTIONS
-XORG_WITH_XSLTPROC
-AC_PROG_SED
+#m4_ifndef([XORG_MACROS_VERSION],
+#          [m4_fatal([must install xorg-macros 1.12 or later before
+#          running autoconf/autogen])])
+#XORG_MACROS_VERSION(1.12)
+#XORG_MANPAGE_SECTIONS
+#XORG_WITH_XSLTPROC
+#AC_PROG_SED
 
 AC_SUBST(VERSION)
 
@@ -103,9 +103,9 @@ symbols/sun_vndr/Makefile
 symbols/xfree68_vndr/Makefile
 types/Makefile
 xkeyboard-config.pc
-docs/Makefile
-man/Makefile
 ])
+#docs/Makefile
+#man/Makefile
 
 echo '***********************************************************'
 echo "  $PACKAGE_NAME is configured with the following parameters:"
