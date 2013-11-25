@@ -21,6 +21,8 @@
   nokiarx44	*			=	nokia_vndr/rx-44(%l)
   nokiarx51	cz(qwerty)		=	nokia_vndr/rx-51(common)+nokia_vndr/rx-51(cz_qwerty)
   nokiarx51	*			=	nokia_vndr/rx-51(common)+nokia_vndr/rx-51(%l%_v)
+  nokiarm680	*			=	nokia_vndr/rm-680(common)+nokia_vndr/rm-680(%l%_v)
+  nokiarm680b2	*			=	nokia_vndr/rm-680-b2(common)+nokia_vndr/rm-680-b2(%l%_v)
   nokiasu8w	*			=	nokia_vndr/su-8w(%l)
   olpc		$olpclayouts		=	olpc+%l%(m)
   olpc		*			=	olpc+%l%(v)

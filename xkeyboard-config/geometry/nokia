@@ -1,6 +1,115 @@
-// Zoomed 3x because of text size
+// The geomeries are zoomed about 3x because of text size in xkbprint. An
+// example for visualizing a keyboard layout is given below.
+//
+// setxkbmap -model nokiarm680 -layout us -print > rm680.xkb
+// xkbcomp rm680.xkb
+// xkbprint -color rm680.xkm
 
-default xkb_geometry "nokiarx51" {
+xkb_geometry "nokiarm680b2" {
+
+    description= "Nokia RM-680";
+    width= 346.5; // 11x8.5mm + 2x11mm border
+    height= 102.0; // 4x7mm + 2x3mm border
+
+    shape.cornerRadius= 1.5;
+    shape "NORM"  { { [25.5,21.0] } };
+    shape "SPCE"  { { [76.5,21.0] } };
+
+    section.left= 33.0;
+    row.left= 0.0;
+    key.shape= "NORM";
+    key.gap= 0;
+    section "Keys" {
+	top= 0;
+	row {
+	    top= 9.0;
+	    keys { <AD01>, <AD02>, <AD03>, <AD04>, <AD05>,
+		   <AD06>, <AD07>, <AD08>, <AD09>, <AD10>,
+		   { <BKSP>, "NORM", color="grey20" }
+	    };
+	};
+	row {
+	    top= 30.0;
+	    keys { <AC01>, <AC02>, <AC03>, <AC04>, <AC05>,
+		   <AC06>, <AC07>, <AC08>, <AC09>, <AC11>,
+		   { <RTRN>, "NORM", color="grey20" }
+	    };
+	};
+	row {
+	    top= 51.0;
+	    keys { <AB01>, <AB02>, <AB03>, <AB04>, <AB05>,
+		   <AB06>, <AB07>, <AB08>, <AB09>, <UP>,
+		   { <RCTL>, "NORM", color="grey20" }
+	    };
+	};
+	row {
+	    top= 72.0;
+	    keys { { <LWIN>, "NORM", color="grey20" },
+		   { <LFSH>, "NORM", color="grey20" },
+		   { <COMP>, "NORM", color="grey20" },
+		   <AB10>,
+		   { <SPCE>, "SPCE", color="white" },
+		   <AC12>,
+		   <LEFT>, <DOWN>, <RGHT>
+	    };
+	};
+    }; // End of "Keys" section
+
+}; // End of "rm680" geometry
+
+xkb_geometry "nokiarm680" {
+
+    description= "Nokia RM-680";
+    width= 346.5; // 11x8.5mm + 2x11mm border
+    height= 102.0; // 4x7mm + 2x3mm border
+
+    shape.cornerRadius= 1.5;
+    shape "NORM"  { { [25.5,21.0] } };
+    shape "SPCE"  { { [76.5,21.0] } };
+
+    section.left= 33.0;
+    row.left= 0.0;
+    key.shape= "NORM";
+    key.gap= 0;
+    section "Keys" {
+	top= 0;
+	row {
+	    top= 9.0;
+	    keys { <AD01>, <AD02>, <AD03>, <AD04>, <AD05>,
+		   <AD06>, <AD07>, <AD08>, <AD09>, <AD10>,
+		   { <BKSP>, "NORM", color="grey20" }
+	    };
+	};
+	row {
+	    top= 30.0;
+	    keys { <AC01>, <AC02>, <AC03>, <AC04>, <AC05>,
+		   <AC06>, <AC07>, <AC08>, <AC09>, <AC11>,
+		   { <RTRN>, "NORM", color="grey20" }
+	    };
+	};
+	row {
+	    top= 51.0;
+	    keys { <AB01>, <AB02>, <AB03>, <AB04>, <AB05>,
+		   <AB06>, <AB07>, <AB08>, <AB09>, <UP>,
+		   { <RCTL>, "NORM", color="grey20" }
+	    };
+	};
+	row {
+	    top= 72.0;
+	    keys { { <LWIN>, "NORM", color="grey20" },
+		   { <LFSH>, "NORM", color="grey20" },
+		   { <COMP>, "NORM", color="grey20" },
+		   <AB10>,
+		   { <SPCE>, "SPCE", color="white" },
+		   <AC12>,
+		   <LEFT>, <DOWN>, <RGHT>
+	    };
+	};
+    }; // End of "Keys" section
+
+}; // End of "rm680" geometry
+
+xkb_geometry "nokiarx51" {
 
     description= "Nokia RX-51";
     width= 273; // 13x6mm + 2x1.5mm border + 2x5mm border
