@@ -1,3 +1,4 @@
+  $jollamodels	=	complete+jolla
   $macs		=	complete+numpad(mac)
   $applealu	=	complete+numpad(mac)
   $nokiamodels	=	complete+nokia
