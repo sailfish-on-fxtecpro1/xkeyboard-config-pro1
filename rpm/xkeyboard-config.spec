@@ -1,7 +1,7 @@
 Name:       xkeyboard-config
 
 Summary:    Alternative xkb data files
-Version:    2.5.1
+Version:    2.10.1
 Release:    1
 Group:      System/X11
 License:    MIT
