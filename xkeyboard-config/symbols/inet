@@ -200,7 +200,9 @@ xkb_symbols "evdev" {
     key <I231>   {      [ Cancel                ]       };
     key <I232>   {      [ XF86MonBrightnessDown ]       };
     key <I233>   {      [ XF86MonBrightnessUp   ]       };
-    key <I234>   {      [ XF86AudioMedia        ]       };
+// HACK: disabled to allow Jolla layout to define different mapping.
+// TODO: there's likely a better way to keep this and allow override.
+//    key <I234>   {      [ XF86AudioMedia        ]       };
     key <I235>   {      [ XF86Display           ]       };
     key <I236>   {      [ XF86KbdLightOnOff     ]       }; // KEY_KBDILLUMTOGGLE
     key <I237>   {      [ XF86KbdBrightnessDown ]       }; // KEY_KBDILLUMDOWN

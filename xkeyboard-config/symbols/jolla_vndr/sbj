@@ -54,4 +54,7 @@ xkb_symbols "common-keys" {
 
     // generated from the headset, must always be in the map.
     key <I264>	{ [	XF86Phone							] };
+    // Some kernel input drivers send KEY_MEDIA from headset button.
+    // Work around by mapping to phone key.
+    key <I234>  { [     XF86Phone                                                       ] };
 };
