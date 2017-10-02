@@ -57,4 +57,7 @@ xkb_symbols "common-keys" {
     // Some kernel input drivers send KEY_MEDIA from headset button.
     // Work around by mapping to phone key.
     key <I234>  { [     XF86Phone                                                       ] };
+    // These should be camera focus and camera snapshot, but there are no better symbols available
+    key <I536>  { [     XF86ContrastAdjust                                              ] };
+    key <I774>  { [     XF86WebCam                                                      ] };
 };
