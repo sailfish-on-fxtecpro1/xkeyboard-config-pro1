@@ -60,4 +60,5 @@ xkb_symbols "common-keys" {
     // These should be camera focus and camera snapshot, but there are no better symbols available
     key <I536>  { [     XF86ContrastAdjust                                              ] };
     key <I774>  { [     XF86WebCam                                                      ] };
+    key <I361>  { [     Select                                                          ] };
 };
