@@ -281,6 +281,7 @@ default xkb_keycodes "evdev" {
 	<I251> = 251;	// #define KEY_BRIGHTNESS_CYCLE    243
 	<I252> = 252;	// #define KEY_BRIGHTNESS_ZERO     244
 	<I253> = 253;	// #define KEY_DISPLAY_OFF         245
+	<I361> = 361;	// #define KEY_SELECT              353
 	<I536> = 536;   // #define KEY_CAMERA_FOCUS        528
 	<I774> = 774;   // #define KEY_CAMERA_SNAPSHOT     766 - not in vanilla kernel
 
