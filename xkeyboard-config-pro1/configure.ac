@@ -94,6 +94,7 @@ symbols/digital_vndr/Makefile
 symbols/fujitsu_vndr/Makefile
 symbols/hp_vndr/Makefile
 symbols/jolla_vndr/Makefile
+symbols/fxtec_vndr/Makefile
 symbols/macintosh_vndr/Makefile
 symbols/nec_vndr/Makefile
 symbols/nokia_vndr/Makefile

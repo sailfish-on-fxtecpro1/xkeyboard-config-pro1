@@ -1,0 +1,9 @@
+default  partial alphanumeric_keys
+xkb_symbols "us" {
+    include "us"
+
+    name[Group1]="Fxtec Pro1 English (US)";
+
+    key <AD10>  { [         p,          P,        slash,        slash ] };
+    key <AC09>  { [         l,          L,     questionm      question ] };
+};

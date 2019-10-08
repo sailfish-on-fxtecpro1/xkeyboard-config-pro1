@@ -5,6 +5,7 @@
   classmate	us			=	pc+%l(classmate)
   empty         *                       =       empty(basic)
   *             empty                   =       empty(basic)
+  fxtecpro1	*			=	pc+fxtec_vndr/pro1(%l)
   jollasbj 	$nonlatin		=	jolla_vndr/sbj(common)+us+%l%(v):2
   jollasbj	*			=	jolla_vndr/sbj(common)+%l%(v)
  $sun		$sun_custom		=	pc+sun_vndr/%l%(v)
