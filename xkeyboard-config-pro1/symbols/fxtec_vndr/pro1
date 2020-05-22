@@ -6,8 +6,7 @@ xkb_symbols "de" {
 
     include "de"
 
-    key <AE12> { [     apostrophe,           grave,           acute,        NoSymbol ] };
-
+    key <AE12> { [      apostrophe,           grave,           acute,        NoSymbol ] };
     key <TLDE> { [               q,               Q,              at,        NoSymbol ] };
     key <AD01> { [               w,               W,     asciicircum,        NoSymbol ] };
     key <AD02> { [               e,               E,        EuroSign,        NoSymbol ] };
@@ -141,6 +140,7 @@ xkb_symbols "us" {
 // previously enabled both by running this as nemo:
 // dconf write /desktop/lipstick-jolla-home/layout \"fxtec_vndr/pro1\(us\),fxtec_vndr/pro1\(us2\)\"
 // dconf write /desktop/lipstick-jolla-home/options \"grp:alt_space_toggle\"
+// dconf write /desktop/lipstick-jolla-home/model "'fxtecpro1'"
 alphanumeric_keys
 xkb_symbols "us2" {
 
