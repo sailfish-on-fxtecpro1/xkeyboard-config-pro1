@@ -1,23 +1,12 @@
-default  partial alphanumeric_keys
-xkb_symbols "us" {
-    include "us"
-
-    name[Group1]="Fxtec Pro1 English (US)";
-
-    key <AD10>  { [         p,          P,        slash,        slash ] };
-    key <AC09>  { [         l,          L,     question,      question ] };
-
-    include "level3(ralt_switch)"
-};
-
-default  partial alphanumeric_keys
+// DE layout for Pro1
+default alphanumeric_keys
 xkb_symbols "de" {
-    include "de"
 
     name[Group1]="Fxtec Pro1 German (de)";
 
-    key <AE12> { [    apostrophe,           grave,           acute,        NoSymbol ] };
+    include "de"
 
+    key <AE12> { [      apostrophe,           grave,           acute,        NoSymbol ] };
     key <TLDE> { [               q,               Q,              at,        NoSymbol ] };
     key <AD01> { [               w,               W,     asciicircum,        NoSymbol ] };
     key <AD02> { [               e,               E,        EuroSign,        NoSymbol ] };
@@ -28,9 +17,9 @@ xkb_symbols "de" {
     key <AD07> { [               i,               I,     bracketleft,        NoSymbol ] };
     key <AD08> { [               o,               O,    bracketright,        NoSymbol ] };
     key <AD09> { [               p,               P,      braceright,        NoSymbol ] };
-    key <AD10> { [    udiaeresis,     Udiaeresis,      asciitilde,        NoSymbol ] };
+    key <AD10> { [      udiaeresis,      Udiaeresis,      asciitilde,        NoSymbol ] };
     key <AC10> { [            plus,        asterisk,      asciitilde,        NoSymbol ] };
- 
+
     key <BKSL> { [               a,               A,   lessthanequal,        NoSymbol ] };
     key <AC01> { [               s,               S, greaterthanequal,       NoSymbol ] };
     key <AC02> { [               d,               D,           U2300,        NoSymbol ] };
@@ -40,9 +29,9 @@ xkb_symbols "de" {
     key <AC06> { [               j,               J,        abovedot,        NoSymbol ] };
     key <AC07> { [               k,               K,       ampersand,        NoSymbol ] };
     key <AC08> { [               l,               L,           acute,        NoSymbol ] };
-    key <AC09> { [    odiaeresis,     Odiaeresis,       backslash,        NoSymbol ] };
-    key <AC11> { [    adiaeresis,     Adiaeresis,      numbersign,        NoSymbol ] };
- 
+    key <AC09> { [      odiaeresis,      Odiaeresis,       backslash,        NoSymbol ] };
+    key <AC11> { [      adiaeresis,      Adiaeresis,      numbersign,        NoSymbol ] };
+
     key <AD11> { [            less,         greater,   guillemotleft,        NoSymbol ] };
     key <AD12> { [               y,               Y,             bar,        NoSymbol ] };
     key <AB01> { [               x,               X,  guillemotright,        NoSymbol ] };
@@ -51,18 +40,26 @@ xkb_symbols "de" {
     key <AB04> { [               b,               B,           U203A,        NoSymbol ] };
     key <AB05> { [               n,               N,           U002D,        NoSymbol ] };
     key <AB06> { [               m,               M,        Greek_mu,        NoSymbol ] };
-    key <AB07> { [           comma,      semicolon,           U02BB,        NoSymbol ] };
+    key <AB07> { [           comma,       semicolon,           U02BB,        NoSymbol ] };
     key <AB08> { [          period,           colon,           U200C,        NoSymbol ] };
-    key <AB09> { [           minus,     underscore,          endash,        NoSymbol ] };
- 
+    key <AB09> { [           minus,      underscore,          endash,        NoSymbol ] };
+
     include "level3(ralt_switch)"
 };
 
-default  partial alphanumeric_keys
+
+// RU layout for Pro1
+// You can toggle between the RU and the US layouts dynamically using Alt+Space if you have
+// previously enabled both by running this as nemo:
+// dconf write /desktop/lipstick-jolla-home/layout \"fxtec_vndr/pro1\(us\),fxtec_vndr/pro1\(ru\)\"
+// dconf write /desktop/lipstick-jolla-home/options \"grp:alt_space_toggle\"
+// dconf write /desktop/lipstick-jolla-home/model "'fxtecpro1'"
+default partial alphanumeric_keys
 xkb_symbols "ru" {
-    include "ru"
 
     name[Group1]="Fxtec Pro1 Russian";
+
+    include "ru"
 
     key <AD10>  { [ Cyrillic_ze,    Cyrillic_ZE,    period,     period ] };
     key <AC09>  { [ Cyrillic_de,    Cyrillic_DE,     comma,      comma ] };
@@ -70,13 +67,16 @@ xkb_symbols "ru" {
     include "level3(ralt_switch)"
 };
 
-default  partial alphanumeric_keys
-xkb_symbols "us-intl" {
-    include "us(basic)"
 
-    name[Group1]="Fxtec Pro1 English (US, intl., with dead keys)";
+// US with extra international characters on levels 3 (YellowArrow modifier) and 4 (Shift+YellowArrow)
+// No dead keys on levels 1 and 2
+// This is the default us layout on Pro1
+default alphanumeric_keys
+xkb_symbols "us" {
 
-# International symbols on levels 3 (YellowArrow modifier) and 4 (Shift+YellowArrow)
+    name[Group1]="Fxtec Pro1 English (US, intl., with AltGr dead keys + extra characters)";
+
+    include "us"
 
     key <TLDE> { [       grave,        asciitilde,           dead_grave,            dead_tilde] };
     key <AE01> { [           1,            exclam,          onesuperior,           exclamdown ] };
@@ -89,8 +89,8 @@ xkb_symbols "us-intl" {
     key <AE08> { [           8,          asterisk,        threequarters,          dead_ogonek ] };
     key <AE09> { [           9,         parenleft,  leftsinglequotemark,           dead_breve ] };
     key <AE10> { [           0,        parenright, rightsinglequotemark,       dead_abovering ] };
-    key <AE11> { [	 minus,        underscore,                  yen,        dead_belowdot ] };
-    key <AE12> { [	 equal,              plus,             multiply,             division ] };
+    key <AE11> { [     	 minus,        underscore,                  yen,        dead_belowdot ] };
+    key <AE12> { [    	 equal,              plus,             multiply,             division ] };
 
     key <AD01> { [           q,                 Q,           adiaeresis,           Adiaeresis ] };
     key <AD02> { [           w,                 W,                aring,                Aring ] };
@@ -103,7 +103,7 @@ xkb_symbols "us-intl" {
     key <AD09> { [           o,                 O,               oacute,               Oacute ] };
     key <AD10> { [           p,                 P,                slash,           odiaeresis ] };
     key <AD11> { [ bracketleft,         braceleft,        guillemotleft,  leftdoublequotemark ] };
-    key <AD12> { [bracketright,        braceright,	 guillemotright, rightdoublequotemark ] };
+    key <AD12> { [bracketright,        braceright,	     guillemotright, rightdoublequotemark ] };
 
     key <AC01> { [           a,                 A,               aacute,               Aacute ] };
     key <AC02> { [           s,                 S,               ssharp,              section ] };
@@ -124,10 +124,80 @@ xkb_symbols "us-intl" {
     key <AB05> { [           b,                 B,           rightarrow,            downarrow ] };
     key <AB06> { [           n,                 N,               ntilde,               Ntilde ] };
     key <AB07> { [           m,                 M,                   mu,           malesymbol ] };
-    key <AB08> { [	 comma,              less,             ccedilla,             Ccedilla ] };
-    key <AB09> { [	period,           greater,        dead_abovedot,           dead_caron ] };
-    key <AB10> { [	 slash,          question,         questiondown,            dead_hook ] };
+    key <AB08> { [	     comma,              less,             ccedilla,             Ccedilla ] };
+    key <AB09> { [	    period,           greater,        dead_abovedot,           dead_caron ] };
+    key <AB10> { [	     slash,          question,         questiondown,            dead_hook ] };
     key <BKSL> { [   backslash,               bar,              notsign,            brokenbar ] };
 
     include "level3(ralt_switch)"
+};
+
+
+// US with extra international characters on levels 3 (YellowArrow modifier) and 4 (Shift+YellowArrow)
+// Some dead keys on levels 1 and 2
+// This is an alternate us layout on Pro1
+// You can toggle between the default and the alternate dynamically using Alt+Space if you have
+// previously enabled both by running this as nemo:
+// dconf write /desktop/lipstick-jolla-home/layout \"fxtec_vndr/pro1\(us\),fxtec_vndr/pro1\(us2\)\"
+// dconf write /desktop/lipstick-jolla-home/options \"grp:alt_space_toggle\"
+// dconf write /desktop/lipstick-jolla-home/model "'fxtecpro1'"
+alphanumeric_keys
+xkb_symbols "us2" {
+
+name[Group1]="Fxtec Pro1 English (US, intl., with dead keys + extra characters)";
+
+include "us"
+
+key <TLDE> { [  dead_grave,        dead_tilde,                grave,           asciitilde ] };
+key <AE01> { [           1,            exclam,          onesuperior,           exclamdown ] };
+key <AE02> { [           2,                at,          twosuperior,     dead_doubleacute ] };
+key <AE03> { [           3,        numbersign,        threesuperior,          dead_macron ] };
+key <AE04> { [           4,            dollar,             currency,             sterling ] };
+key <AE05> { [           5,           percent,             EuroSign,         dead_cedilla ] };
+key <AE06> { [           6,   dead_circumflex,           onequarter,          asciicircum ] };
+key <AE07> { [           7,         ampersand,              onehalf,            dead_horn ] };
+key <AE08> { [           8,          asterisk,        threequarters,          dead_ogonek ] };
+key <AE09> { [           9,         parenleft,  leftsinglequotemark,           dead_breve ] };
+key <AE10> { [           0,        parenright, rightsinglequotemark,       dead_abovering ] };
+key <AE11> { [       minus,        underscore,                  yen,        dead_belowdot ] };
+key <AE12> { [       equal,              plus,             multiply,             division ] };
+
+key <AD01> { [           q,                 Q,           adiaeresis,           Adiaeresis ] };
+key <AD02> { [           w,                 W,                aring,                Aring ] };
+key <AD03> { [           e,                 E,               eacute,               Eacute ] };
+key <AD04> { [           r,                 R,           registered,           registered ] };
+key <AD05> { [           t,                 T,                thorn,                THORN ] };
+key <AD06> { [           y,                 Y,           udiaeresis,           Udiaeresis ] };
+key <AD07> { [           u,                 U,               uacute,               Uacute ] };
+key <AD08> { [           i,                 I,               iacute,               Iacute ] };
+key <AD09> { [           o,                 O,               oacute,               Oacute ] };
+key <AD10> { [           p,                 P,                slash,           odiaeresis ] };
+key <AD11> { [ bracketleft,         braceleft,        guillemotleft,  leftdoublequotemark ] };
+key <AD12> { [bracketright,        braceright,       guillemotright, rightdoublequotemark ] };
+
+key <AC01> { [           a,                 A,               aacute,               Aacute ] };
+key <AC02> { [           s,                 S,               ssharp,              section ] };
+key <AC03> { [           d,                 D,                  eth,                  ETH ] };
+key <AC04> { [           f,                 F,             function,         femalesymbol ] };
+key <AC05> { [           g,                 G,         emopencircle,       emfilledcircle ] };
+key <AC06> { [           h,                 H,             infinity,              implies ] };
+key <AC07> { [           j,                 J,             notequal,                U25B8 ] };
+key <AC08> { [           k,                 K,                   oe,                   OE ] };
+key <AC09> { [           l,                 L,             question,               oslash ] };
+key <AC10> { [   semicolon,	            colon,             ellipsis,               degree ] };
+key <AC11> { [  dead_acute,    dead_diaeresis,           apostrophe,             quotedbl ] };
+
+key <AB01> { [           z,                 Z,                   ae,                   AE ] };
+key <AB02> { [           x,                 X,               emdash,            plusminus ] };
+key <AB03> { [           c,                 C,            copyright,                 cent ] };
+key <AB04> { [           v,                 V,            leftarrow,              uparrow ] };
+key <AB05> { [           b,                 B,           rightarrow,            downarrow ] };
+key <AB06> { [           n,                 N,               ntilde,               Ntilde ] };
+key <AB07> { [           m,                 M,                   mu,           malesymbol ] };
+key <AB08> { [       comma,              less,             ccedilla,             Ccedilla ] };
+key <AB09> { [      period,           greater,        dead_abovedot,           dead_caron ] };
+key <AB10> { [       slash,          question,         questiondown,            dead_hook ] };
+key <BKSL> { [   backslash,               bar,              notsign,            brokenbar ] };
+
+include "level3(ralt_switch)"
 };
