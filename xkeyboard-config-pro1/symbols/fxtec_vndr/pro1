@@ -201,3 +201,19 @@ key <BKSL> { [   backslash,               bar,              notsign,            
 
 include "level3(ralt_switch)"
 };
+
+// Polish layout for Pro1
+// You can toggle between the RU and the US layouts dynamically using Alt+Space if you have
+// previously enabled both by running this as nemo:
+// dconf write /desktop/lipstick-jolla-home/layout \"fxtec_vndr/pro1\(us\),fxtec_vndr/pro1\(pl\)\"
+// dconf write /desktop/lipstick-jolla-home/options \"grp:alt_space_toggle\"
+// dconf write /desktop/lipstick-jolla-home/model "'fxtecpro1'"
+default partial alphanumeric_keys
+xkb_symbols "pl" {
+
+    name[Group1]="Fxtec Pro1 Polish";
+
+    include "pl"
+
+    include "level3(ralt_switch)"
+};
